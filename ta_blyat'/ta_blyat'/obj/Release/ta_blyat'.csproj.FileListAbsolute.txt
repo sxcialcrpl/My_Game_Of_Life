@@ -1,0 +1,6 @@
+C:\Users\Dima\Desktop\projects\ta_blyat'\ta_blyat'\bin\Release\ta_blyat'.exe.config
+C:\Users\Dima\Desktop\projects\ta_blyat'\ta_blyat'\bin\Release\ta_blyat'.exe
+C:\Users\Dima\Desktop\projects\ta_blyat'\ta_blyat'\bin\Release\ta_blyat'.pdb
+C:\Users\Dima\Desktop\projects\ta_blyat'\ta_blyat'\obj\Release\ta_blyat'.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Desktop\projects\ta_blyat'\ta_blyat'\obj\Release\ta_blyat'.exe
+C:\Users\Dima\Desktop\projects\ta_blyat'\ta_blyat'\obj\Release\ta_blyat'.pdb
