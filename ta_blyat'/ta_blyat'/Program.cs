@@ -21,7 +21,6 @@ namespace ta_blyat_ {
 
 			//точка - мертвая клетка, собака - живая (./@)
 			
-			string line;
 			string[] fld = File.ReadAllLines("C:\\Users\\Dima\\Desktop\\projects\\My_Game_Of_Life\\ta_blyat'\\ta_blyat'\\fields\\field.txt");
 			Console.SetWindowSize(fld[0].Length, fld.Length);
 			//var sr = new StreamReader("C:\\Users\\Dima\\Desktop\\projects\\ta_blyat'\\ta_blyat'\\field.txt");
