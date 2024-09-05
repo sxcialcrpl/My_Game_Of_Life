@@ -22,7 +22,7 @@ namespace ta_blyat_ {
 			//точка - мертвая клетка, собака - живая (./@)
 			
 			string line;
-			string[] fld = File.ReadAllLines("C:\\Users\\Dima\\Desktop\\projects\\ta_blyat'\\ta_blyat'\\fields\\field.txt");
+			string[] fld = File.ReadAllLines("C:\\Users\\Dima\\Desktop\\projects\\My_Game_Of_Life\\ta_blyat'\\ta_blyat'\\fields\\field.txt");
 			Console.SetWindowSize(fld[0].Length, fld.Length);
 			//var sr = new StreamReader("C:\\Users\\Dima\\Desktop\\projects\\ta_blyat'\\ta_blyat'\\field.txt");
 			/*foreach(var ln in fld){
@@ -35,14 +35,14 @@ namespace ta_blyat_ {
 				Console.WriteLine(el);
 			}
 			Console.SetCursorPosition(0, 0);
-			Thread.Sleep(1000);
-			Console.Clear();
+			
 			//теперь создаем основную логику игры
 			//тут мы в вечном цикле будем заводить цикл фор
 			//в котором будем пробегать по каждой точке что у нас есть на поле (в переменной)
 			//если это не точка то скипаем
 			//если точка или собака то проверяем на правила игры и меняем файл (field.txt)
 			//в конце хода мы переносим изменения из файла в поле (string[] fld)
+
 			while(true){
 				for(int i = 1; i < fld.Length - 1; i++) {//с еденичек до n - 1 что бы не было лишней итерации на границы и эксепшенов
 					for(int j = 1; j < fld[i].Length - 1; j++){
@@ -57,20 +57,17 @@ namespace ta_blyat_ {
 					}
 				}
 				fld = fld2.ToArray();
-				Thread.Sleep(1000);
-				Console.Clear();
 				foreach(var ln in fld){
 					Console.WriteLine(ln);
 				}
+				
 				Console.SetCursorPosition(0, 0);
+				Thread.Sleep(1000);
+				
+				
+				//Console.SetCursorPosition(0, 0);
 			}
 
-
-			//sr.Close();
-			
-
-
-			Console.ReadKey();
 		}
 		private static int Check(string[] field, int row, int column){
 			int counter = 0;
