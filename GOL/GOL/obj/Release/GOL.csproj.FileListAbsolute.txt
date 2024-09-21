@@ -1,0 +1,12 @@
+C:\Users\Dima\Desktop\projects\GOL\GOL\bin\Release\GOL.exe.config
+C:\Users\Dima\Desktop\projects\GOL\GOL\bin\Release\GOL.exe
+C:\Users\Dima\Desktop\projects\GOL\GOL\bin\Release\GOL.pdb
+C:\Users\Dima\Desktop\projects\GOL\GOL\obj\Release\GOL.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Desktop\projects\GOL\GOL\obj\Release\GOL.exe
+C:\Users\Dima\Desktop\projects\GOL\GOL\obj\Release\GOL.pdb
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\bin\Release\GOL.exe.config
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\bin\Release\GOL.exe
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\bin\Release\GOL.pdb
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Release\GOL.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Release\GOL.exe
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Release\GOL.pdb

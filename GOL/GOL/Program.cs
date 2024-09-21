@@ -12,6 +12,9 @@ namespace GOL {
 		static void Main(string[] args) {
 			Console.CursorVisible = false;
 
+			Console.BufferHeight = 5000;
+			Console.BufferWidth = 3500;
+
 			//1. если рядом с живой клеткой менее 2-ух живых, то она умирает
 			//2. если рядом с живой клеткой более 3-ех живых, то она умирает
 			//3. если рядом с мертвой клеткой ровно 3 живых, то она рождается
@@ -22,10 +25,9 @@ namespace GOL {
 			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\field.txt");
 
 			string[] fld = File.ReadAllLines(pathToField);
-			Console.SetWindowSize(fld[0].Length, fld.Length);
+			Console.SetWindowSize(fld[0].Length + 1, fld.Length);
 
-			Console.BufferHeight = fld.Length + 1;
-			Console.BufferWidth = fld[0].Length + 1;
+			
 			
 			List<string> fld2 = new List<string>(fld);
 			foreach(var el in fld2) {
