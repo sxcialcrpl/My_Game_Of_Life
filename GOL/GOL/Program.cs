@@ -14,6 +14,7 @@ namespace GOL {
 
 			Console.BufferHeight = 5000;
 			Console.BufferWidth = 3500;
+			var Settings = new Dictionary<int, int>();
 
 			//1. если рядом с живой клеткой менее 2-ух живых, то она умирает
 			//2. если рядом с живой клеткой более 3-ех живых, то она умирает
@@ -21,9 +22,16 @@ namespace GOL {
 
 			//точка - мертвая клетка, собака - живая (./@)
 
-
+			string pathToRules=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\rules.txt");
 			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\field.txt");
 
+			string[] rls = File.ReadAllLines(pathToRules);
+			for(int i = 0; i < rls.Length; i++){
+				Settings.Add(Convert.ToInt32(rls[i][0].ToString()), Convert.ToInt32(rls[i][rls[i].Length - 1].ToString()));
+				
+			}
+
+			
 			string[] fld = File.ReadAllLines(pathToField);
 			Console.SetWindowSize(fld[0].Length + 1, fld.Length);
 
@@ -42,10 +50,10 @@ namespace GOL {
 					for(int j = 1; j < fld[i].Length - 1; j++){
 						int neighbrs = Check(fld, i, j);
 						if(fld[i][j] == '@'){
-							if(neighbrs > 3 || neighbrs < 2){
+							if(neighbrs <  Settings[1]|| neighbrs > Settings[2]){
 								fld2[i] = fld2[i].Remove(j, 1).Insert(j, ".");
 							}
-						}else if(neighbrs == 3){
+						}else if(neighbrs == Settings[3]){
 							fld2[i] = fld2[i].Remove(j, 1).Insert(j, "@");
 						}
 					}
