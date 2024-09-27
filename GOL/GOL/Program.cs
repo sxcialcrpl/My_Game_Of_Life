@@ -42,8 +42,8 @@ namespace GOL {
 				Console.WriteLine(el);
 			}
 			Console.SetCursorPosition(0, 0);
-			
-			
+
+			Thread.Sleep(1000);
 
 			while(true){
 				for(int i = 1; i < fld.Length - 1; i++) {//с еденичек до n - 1 что бы не было лишней итерации на границы и эксепшенов
