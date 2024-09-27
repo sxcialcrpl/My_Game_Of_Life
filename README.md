@@ -2,7 +2,7 @@
 
 Это учебный проект и обязательно будут доработки!
 
-Всё что нужно, это запустить файл "GOL.ехе" файл по пути ".../My_Game_Of_Life/GOL/GOL/GOL.exe"
+Всё что нужно, это запустить файл "GOL.ехе" файл по пути ".../My_Game_Of_Life/GOL/GOL/bin/Debug/GOL.exe"
 
 Стартовое поле можно редактировать в файле "field.txt" по пути ".../My_Game_Of_Life/GOL/GOL/rules/fields.txt"
 
