@@ -14,7 +14,7 @@ namespace GOL {
 
 			Console.BufferHeight = 5000;
 			Console.BufferWidth = 3500;
-			var Settings = new Dictionary<int, int>();
+			var Settings = new Dictionary<char, double>();
 
 			//1. если рядом с живой клеткой менее 2-ух живых, то она умирает
 			//2. если рядом с живой клеткой более 3-ех живых, то она умирает
@@ -29,12 +29,23 @@ namespace GOL {
 			string pathToRules=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules\\rules.txt");
 			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules\\field.txt");
 			#endif
-			string[] rls = File.ReadAllLines(pathToRules);
-			for(int i = 0; i < rls.Length; i++){
-				Settings.Add(Convert.ToInt32(rls[i][0].ToString()), Convert.ToInt32(rls[i][rls[i].Length - 1].ToString()));
-				
-			}
+			// путь к файлам с полем и правилами
+			
+			StreamReader sr = new StreamReader(pathToRules);
 
+			string line;
+			while((line = sr.ReadLine()) != null){
+				int i = line.Length - 1;
+				while(line[i] != ' '){
+					i--;
+				}
+				Settings.Add(line[0], Convert.ToDouble(line.Substring(i)));
+			}
+			int min4l = (int)Settings['1'];
+			int max4l = (int)Settings['1'];
+			int val4r = (int)Settings['3'];
+			double time = Settings['4'];
+			
 			
 			string[] fld = File.ReadAllLines(pathToField);
 			Console.SetWindowSize(fld[0].Length + 1, fld.Length);
@@ -47,17 +58,17 @@ namespace GOL {
 			}
 			Console.SetCursorPosition(0, 0);
 
-			Thread.Sleep(1000);
+			Thread.Sleep((int)(1000 * time));
 
 			while(true){
 				for(int i = 1; i < fld.Length - 1; i++) {//с еденичек до n - 1 что бы не было лишней итерации на границы и эксепшенов
 					for(int j = 1; j < fld[i].Length - 1; j++){
 						int neighbrs = Check(fld, i, j);
 						if(fld[i][j] == '@'){
-							if(neighbrs <  Settings[1]|| neighbrs > Settings[2]){
+							if(neighbrs <  min4l|| neighbrs > max4l){
 								fld2[i] = fld2[i].Remove(j, 1).Insert(j, ".");
 							}
-						}else if(neighbrs == Settings[3]){
+						}else if(neighbrs == val4r){
 							fld2[i] = fld2[i].Remove(j, 1).Insert(j, "@");
 						}
 					}
@@ -68,7 +79,7 @@ namespace GOL {
 				}
 				
 				Console.SetCursorPosition(0, 0);
-				Thread.Sleep(1000);
+				Thread.Sleep((int)(1000 * time));
 				
 			}
 
