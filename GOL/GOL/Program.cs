@@ -21,10 +21,14 @@ namespace GOL {
 			//3. если рядом с мертвой клеткой ровно 3 живых, то она рождается
 
 			//точка - мертвая клетка, собака - живая (./@)
-
+			#if DEBUG
 			string pathToRules=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\rules.txt");
 			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\field.txt");
-
+			#endif
+			#if !DEBUG
+			string pathToRules=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules\\rules.txt");
+			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules\\field.txt");
+			#endif
 			string[] rls = File.ReadAllLines(pathToRules);
 			for(int i = 0; i < rls.Length; i++){
 				Settings.Add(Convert.ToInt32(rls[i][0].ToString()), Convert.ToInt32(rls[i][rls[i].Length - 1].ToString()));
@@ -65,7 +69,6 @@ namespace GOL {
 				
 				Console.SetCursorPosition(0, 0);
 				Thread.Sleep(1000);
-				
 				
 			}
 
