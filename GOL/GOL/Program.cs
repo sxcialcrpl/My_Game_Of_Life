@@ -39,12 +39,17 @@ namespace GOL {
 				while(line[i] != ' '){
 					i--;
 				}
-				Settings.Add(line[0], Convert.ToDouble(line.Substring(i)));
+				try{
+					Settings.Add(line[0], Convert.ToDouble(line.Substring(i).Replace(',', '.')));
+				}catch{
+					Settings.Add(line[0], Convert.ToDouble(line.Substring(i).Replace('.', ',')));
+				}
 			}
 			int min4l = (int)Settings['1'];
 			int max4l = (int)Settings['1'];
 			int val4r = (int)Settings['3'];
 			double time = Settings['4'];
+
 			
 			
 			string[] fld = File.ReadAllLines(pathToField);
