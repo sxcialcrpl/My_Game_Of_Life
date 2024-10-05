@@ -13,7 +13,7 @@ namespace GOL {
 			Console.CursorVisible = false;
 
 			Console.BufferHeight = 5000;
-			Console.BufferWidth = 150;
+			Console.BufferWidth = 3500; 
 			var Settings = new Dictionary<char, double>();
 
 			//1. если рядом с живой клеткой менее 2-ух живых, то она умирает
@@ -49,7 +49,13 @@ namespace GOL {
 			int max4l = (int)Settings['2'];
 			int val4r = (int)Settings['3'];
 			double time = Settings['4'];
-
+			var clr4back = (ConsoleColor)(int)Settings['5'];
+			var clr4font = (ConsoleColor)(int)Settings['6'];
+			
+			
+			Console.BackgroundColor = clr4back;
+			Console.ForegroundColor = clr4font;
+			
 			
 			
 			string[] fld = File.ReadAllLines(pathToField);

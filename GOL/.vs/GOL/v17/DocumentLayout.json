@@ -25,12 +25,12 @@
               "Title": "Console.cs",
               "DocumentMoniker": "C:\\Users\\Dima\\AppData\\Local\\Temp\\.vsdbgsrc\\ae3b3c50b32e5c0841775aef800e93f9ef6ed3fde4f2e7711f36d42aa59ab791\\Console.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ae3b3c50b32e5c0841775aef800e93f9ef6ed3fde4f2e7711f36d42aa59ab791\\Console.cs",
-              "ToolTip": "C:\\Users\\Dima\\AppData\\Local\\Temp\\.vsdbgsrc\\ae3b3c50b32e5c0841775aef800e93f9ef6ed3fde4f2e7711f36d42aa59ab791\\Console.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ae3b3c50b32e5c0841775aef800e93f9ef6ed3fde4f2e7711f36d42aa59ab791\\Console.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "ViewState": "AgIAAJEEAAAAAAAAAAAWwKQEAAADAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Dima\\AppData\\Local\\Temp\\.vsdbgsrc\\ae3b3c50b32e5c0841775aef800e93f9ef6ed3fde4f2e7711f36d42aa59ab791\\Console.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ae3b3c50b32e5c0841775aef800e93f9ef6ed3fde4f2e7711f36d42aa59ab791\\Console.cs",
+              "ViewState": "AgIAAEwEAAAAAAAAAAAWwKQEAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:29:39.252Z",
-              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "GOL\\Program.cs",
               "ToolTip": "C:\\Users\\Dima\\Desktop\\projects\\My_Game_Of_Life\\GOL\\GOL\\Program.cs",
               "RelativeToolTip": "GOL\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAA2wDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T06:57:51.584Z",
               "EditorCaption": ""
