@@ -5,22 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
+using System.Runtime.InteropServices;
+using System.Collections;
 
 namespace GOL {
 	class Program {
+		
 
 		static void Main(string[] args) {
 			Console.CursorVisible = false;
 
 			Console.BufferHeight = 5000;
 			Console.BufferWidth = 3500; 
-			var Settings = new Dictionary<char, double>();
+			var Settings = new Hashtable();
 
-			//1. если рядом с живой клеткой менее 2-ух живых, то она умирает
-			//2. если рядом с живой клеткой более 3-ех живых, то она умирает
-			//3. если рядом с мертвой клеткой ровно 3 живых, то она рождается
-
-			//точка - мертвая клетка, собака - живая (./@)
 			#if DEBUG
 			string pathToRules=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\rules.txt");
 			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\rules\\field.txt");
@@ -29,7 +27,7 @@ namespace GOL {
 			string pathToRules=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules\\rules.txt");
 			string pathToField=System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rules\\field.txt");
 			#endif
-			// путь к файлам с полем и правилами
+			
 			
 			StreamReader sr = new StreamReader(pathToRules);
 
@@ -39,22 +37,53 @@ namespace GOL {
 				while(line[i] != ' '){
 					i--;
 				}
-				try{
-					Settings.Add(line[0], Convert.ToDouble(line.Substring(i).Replace(',', '.')));
-				}catch{
-					Settings.Add(line[0], Convert.ToDouble(line.Substring(i).Replace('.', ',')));
-				}
+				Settings.Add(line[0], line.Substring(i));
+				
 			}
-			int min4l = (int)Settings['1'];
-			int max4l = (int)Settings['2'];
-			int val4r = (int)Settings['3'];
-			double time = Settings['4'];
-			var clr4back = (ConsoleColor)(int)Settings['5'];
-			var clr4font = (ConsoleColor)(int)Settings['6'];
+			
+			double time;
+			int min4l = Convert.ToInt32(Settings['1']);
+			int max4l = Convert.ToInt32(Settings['2']);
+			int val4r = Convert.ToInt32(Settings['3']);
+			try{
+				time = Convert.ToDouble(Settings['4'].ToString().Replace(',', '.'));
+			}catch{
+				time = Convert.ToDouble(Settings['4'].ToString().Replace('.', ','));
+			}
+			ConsoleColor clr4back = (ConsoleColor)Convert.ToInt32(Settings['5']);
+			ConsoleColor clr4font = (ConsoleColor)Convert.ToInt32(Settings['6']);
+			int theme = Convert.ToInt32(Settings['7']);
+			char chr4d = Convert.ToChar(Settings['8'].ToString().Trim());
+			char chr4l = Convert.ToChar(Settings['9'].ToString().Trim());
+			
+
+			switch(theme){
+			case 0:
+				Console.BackgroundColor = clr4back;
+				Console.ForegroundColor = clr4font;
+				break;
+
+			case 1:
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.ForegroundColor = ConsoleColor.White;
+				break;
+			case 2:
+				Console.BackgroundColor = ConsoleColor.White;
+				Console.ForegroundColor = ConsoleColor.Black;
+				break;
+
+			case 3:
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.ForegroundColor = ConsoleColor.DarkGreen;
+				break;
+			case 4:
+				Console.BackgroundColor = ConsoleColor.Gray;
+				Console.ForegroundColor = ConsoleColor.Black;
+				break;
+
+			}
 			
 			
-			Console.BackgroundColor = clr4back;
-			Console.ForegroundColor = clr4font;
 			
 			
 			
@@ -74,8 +103,8 @@ namespace GOL {
 			while(true){
 				for(int i = 1; i < fld.Length - 1; i++) {//с еденичек до n - 1 что бы не было лишней итерации на границы и эксепшенов
 					for(int j = 1; j < fld[i].Length - 1; j++){
-						int neighbrs = Check(fld, i, j);
-						if(fld[i][j] == '@'){
+						int neighbrs = Check(fld, i, j, chr4l);
+						if(fld[i][j] == chr4l){
 							if(neighbrs <  min4l|| neighbrs > max4l){
 								fld2[i] = fld2[i].Remove(j, 1).Insert(j, ".");
 							}
@@ -95,30 +124,31 @@ namespace GOL {
 			}
 
 		}
-		private static int Check(string[] field, int row, int column){
+
+		private static int Check(string[] field, int row, int column, char chr){
 			int counter = 0;
-			if(field[row - 1][column] == '@'){
+			if(field[row - 1][column] == chr){
 				counter++;
 			}
-			if(field[row][column - 1] == '@'){
+			if(field[row][column - 1] == chr){
 				counter++;
 			}
-			if(field[row - 1][column - 1] == '@'){
+			if(field[row - 1][column - 1] == chr){
 				counter++;
 			}
-			if(field[row - 1][column + 1] == '@'){
+			if(field[row - 1][column + 1] == chr){
 				counter++;
 			}
-			if(field[row + 1][column] == '@'){
+			if(field[row + 1][column] == chr){
 				counter++;
 			}
-			if(field[row + 1][column - 1] == '@'){
+			if(field[row + 1][column - 1] == chr){
 				counter++;
 			}
-			if(field[row + 1][column + 1] == '@'){
+			if(field[row + 1][column + 1] == chr){
 				counter++;
 			}
-			if(field[row][column + 1] == '@'){
+			if(field[row][column + 1] == chr){
 				counter++;
 			}
 			return counter;
