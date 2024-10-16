@@ -5,6 +5,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{4A83F41D-5D68-4ED7-B4D2-D0E4388DAF02}|GOL\\GOL.csproj|c:\\users\\dima\\desktop\\projects\\my_game_of_life\\gol\\gol\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A83F41D-5D68-4ED7-B4D2-D0E4388DAF02}|GOL\\GOL.csproj|solutionrelative:gol\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dima\\AppData\\Local\\Temp\\.vsdbgsrc\\b7593aad4d470748bc3fc7cbcedf47abff82781cf0e0a9de360285b5a0269c3d\\Convert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +17,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Convert.cs",
+              "DocumentMoniker": "C:\\Users\\Dima\\AppData\\Local\\Temp\\.vsdbgsrc\\b7593aad4d470748bc3fc7cbcedf47abff82781cf0e0a9de360285b5a0269c3d\\Convert.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b7593aad4d470748bc3fc7cbcedf47abff82781cf0e0a9de360285b5a0269c3d\\Convert.cs",
+              "ToolTip": "C:\\Users\\Dima\\AppData\\Local\\Temp\\.vsdbgsrc\\b7593aad4d470748bc3fc7cbcedf47abff82781cf0e0a9de360285b5a0269c3d\\Convert.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b7593aad4d470748bc3fc7cbcedf47abff82781cf0e0a9de360285b5a0269c3d\\Convert.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AgIAABsCAAAAAAAAAIAwwCoCAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T09:52:28.213Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +40,7 @@
               "RelativeDocumentMoniker": "GOL\\Program.cs",
               "ToolTip": "C:\\Users\\Dima\\Desktop\\projects\\My_Game_Of_Life\\GOL\\GOL\\Program.cs",
               "RelativeToolTip": "GOL\\Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAA2wDgAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T06:57:51.584Z",
               "EditorCaption": ""

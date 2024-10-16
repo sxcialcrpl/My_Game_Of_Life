@@ -38,23 +38,32 @@ namespace GOL {
 					i--;
 				}
 				Settings.Add(line[0], line.Substring(i));
-				
 			}
 			
 			double time;
-			int min4l = Convert.ToInt32(Settings['1']);
-			int max4l = Convert.ToInt32(Settings['2']);
-			int val4r = Convert.ToInt32(Settings['3']);
+			int min4l; 
+			int max4l;
+			int val4r;
+			ConsoleColor clr4back;
+			ConsoleColor clr4font;
+			int theme;
+			char chr4d;
+			char chr4l;
+			//инициализация параметров
+
+			min4l = Convert.ToInt32(Settings['1']);
+			max4l = Convert.ToInt32(Settings['2']);
+			val4r = Convert.ToInt32(Settings['3']);
 			try{
 				time = Convert.ToDouble(Settings['4'].ToString().Replace(',', '.'));
 			}catch{
 				time = Convert.ToDouble(Settings['4'].ToString().Replace('.', ','));
 			}
-			ConsoleColor clr4back = (ConsoleColor)Convert.ToInt32(Settings['5']);
-			ConsoleColor clr4font = (ConsoleColor)Convert.ToInt32(Settings['6']);
-			int theme = Convert.ToInt32(Settings['7']);
-			char chr4d = Convert.ToChar(Settings['8'].ToString().Trim());
-			char chr4l = Convert.ToChar(Settings['9'].ToString().Trim());
+			clr4back = (ConsoleColor)Convert.ToInt32(Settings['5']);
+			clr4font = (ConsoleColor)Convert.ToInt32(Settings['6']);
+			theme = Convert.ToInt32(Settings['7']);
+			chr4d = Settings['8'].ToString().Trim().Length == 0 ? ' ' : Convert.ToChar(Settings['8'].ToString().Trim());
+			chr4l = Settings['9'].ToString().Trim().Length == 0 ? ' ' : Convert.ToChar(Settings['9'].ToString().Trim());
 			
 
 			switch(theme){
@@ -80,10 +89,7 @@ namespace GOL {
 				Console.BackgroundColor = ConsoleColor.Gray;
 				Console.ForegroundColor = ConsoleColor.Black;
 				break;
-
 			}
-			
-			
 			
 			
 			
@@ -101,15 +107,15 @@ namespace GOL {
 			Thread.Sleep((int)(1000 * time));
 
 			while(true){
-				for(int i = 1; i < fld.Length - 1; i++) {//с еденичек до n - 1 что бы не было лишней итерации на границы и эксепшенов
+				for(int i = 1; i < fld.Length - 1; i++) {
 					for(int j = 1; j < fld[i].Length - 1; j++){
 						int neighbrs = Check(fld, i, j, chr4l);
 						if(fld[i][j] == chr4l){
 							if(neighbrs <  min4l|| neighbrs > max4l){
-								fld2[i] = fld2[i].Remove(j, 1).Insert(j, ".");
+								fld2[i] = fld2[i].Remove(j, 1).Insert(j, chr4d.ToString());
 							}
 						}else if(neighbrs == val4r){
-							fld2[i] = fld2[i].Remove(j, 1).Insert(j, "@");
+							fld2[i] = fld2[i].Remove(j, 1).Insert(j, chr4l.ToString());
 						}
 					}
 				}
