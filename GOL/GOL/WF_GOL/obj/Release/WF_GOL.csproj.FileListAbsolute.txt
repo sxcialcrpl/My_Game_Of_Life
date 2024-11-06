@@ -1,0 +1,10 @@
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\bin\Release\GOL.exe.config
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\bin\Release\GOL.exe
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\bin\Release\GOL.pdb
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\WF_GOL.csproj.AssemblyReference.cache
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\GOL.Properties.Resources.resources
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\GOL.MainForm.resources
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\WF_GOL.csproj.GenerateResource.cache
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\WF_GOL.csproj.CoreCompileInputs.cache
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\GOL.exe
+C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\WF_GOL\obj\Release\GOL.pdb

@@ -1,7 +1,0 @@
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\bin\Debug\GOL.exe.config
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\bin\Debug\GOL.exe
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\bin\Debug\GOL.pdb
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Debug\GOL.csproj.CoreCompileInputs.cache
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Debug\GOL.exe
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Debug\GOL.pdb
-C:\Users\Dima\Desktop\projects\My_Game_Of_Life\GOL\GOL\obj\Debug\GOL.csproj.AssemblyReference.cache
